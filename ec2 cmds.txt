@@ -1,0 +1,120 @@
+login as: ubuntu
+Authenticating with public key "test"
+Welcome to Ubuntu 24.04.3 LTS (GNU/Linux 6.14.0-1018-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri Jan 30 09:22:15 UTC 2026
+
+  System load:  0.0               Temperature:           -273.1 C
+  Usage of /:   9.6% of 18.33GB   Processes:             111
+  Memory usage: 23%               Users logged in:       0
+  Swap usage:   0%                IPv4 address for ens5: 172.31.5.232
+
+Expanded Security Maintenance for Applications is not enabled.
+
+0 updates can be applied immediately.
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+The list of available updates is more than a week old.
+To check for new updates run: sudo apt update
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+ubuntu@ip-172-31-5-232:~$ ls
+ubuntu@ip-172-31-5-232:~$ test.txt
+test.txt: command not found
+ubuntu@ip-172-31-5-232:~$ touch file.txt
+ubuntu@ip-172-31-5-232:~$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_ed25519): /home/ubuntu/ .ssh/ubuntu
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Saving key "/home/ubuntu/ .ssh/ubuntu" failed: No such file or directory
+ubuntu@ip-172-31-5-232:~$ /home/ubuntu/.ssh/ubuntu/home/ubuntu/
+-bash: /home/ubuntu/.ssh/ubuntu/home/ubuntu/: No such file or directory
+ubuntu@ip-172-31-5-232:~$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ubuntu/.ssh/id_ed25519
+Your public key has been saved in /home/ubuntu/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:Akzz98NUVQ1XW23gF5DJFRnNfaeN9JNmc7x92bsta8M ubuntu@ip-172-31-5-232
+The key's randomart image is:
++--[ED25519 256]--+
+|    o       ooOX#|
+|   o o     . =.o&|
+|    o . . .  ..O=|
+|     . . +    oB=|
+|      . S +   o O|
+|       .   .   o+|
+|             .  o|
+|              E..|
+|             ..=o|
++----[SHA256]-----+
+ubuntu@ip-172-31-5-232:~$ ^C
+ubuntu@ip-172-31-5-232:~$ cat ~/ .ssh/ubuntu.pub
+cat: /home/ubuntu/: Is a directory
+cat: .ssh/ubuntu.pub: No such file or directory
+ubuntu@ip-172-31-5-232:~$ cat ~/.ssh/ubuntu.pub
+cat: /home/ubuntu/.ssh/ubuntu.pub: No such file or directory
+ubuntu@ip-172-31-5-232:~$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/ubuntu/.ssh/id_ed25519): /home/ubuntu/.ssh/ubuntu
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ubuntu/.ssh/ubuntu
+Your public key has been saved in /home/ubuntu/.ssh/ubuntu.pub
+The key fingerprint is:
+SHA256:hosYJA4IIi7WZHzWqLy0rXFHMu3DmJGnIBU9tsUSD6c ubuntu@ip-172-31-5-232
+The key's randomart image is:
++--[ED25519 256]--+
+|+ .+oo=.         |
+|* +o O=+         |
+|=o+.=EB.         |
+|=+ = * =         |
+| .+ = & S        |
+|   * B B         |
+|  . = o .        |
+|   .             |
+|                 |
++----[SHA256]-----+
+
+ubuntu@ip-172-31-5-232:~$ cat ~/.ssh/ubuntu.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBtJ4ly9XjeGeYx/6hQG6wYWaRm+N55aqsQqZdXyniu5 ubuntu@ip-172-31-5-232
+ubuntu@ip-172-31-5-232:~$ ^C
+ubuntu@ip-172-31-5-232:~$ sudo apt install apache2
+
+Do you want to continue? [Y/n] y
+
+ubuntu@ip-172-31-5-232:~$ sudo apt update
+
+
+Do you want to continue? [Y/n] y
+
+
+
+ubuntu@ip-172-31-5-232:~$ git clone https://github.com/deek023/workshop.git-----------------------------------
+
+
+ubuntu@ip-172-31-5-232:~$ mv workshop/ /var/www/html-----------------------------------------
+mv: cannot move 'workshop/' to '/var/www/html/workshop': Permission denied
+ubuntu@ip-172-31-5-232:~$ sudo mv workshop/ /var/www/html------------------------------------
+
+in chrome instance public id along with repo link
